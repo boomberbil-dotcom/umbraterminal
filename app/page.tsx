@@ -141,7 +141,7 @@ export default function UmbraTerminal() {
                      border border-purple-500/50 neon-purple text-sm px-6 py-2
                      transition-all duration-300 hover:shadow-lg hover:shadow-purple-500/20"
           >
-            Contract: To Be Announced
+            918iW3U2qBwvUx4B8x4uDfUSxqboX7e85gUPWZq3pump
           </Button>
         </div>
       </nav>
@@ -155,15 +155,22 @@ export default function UmbraTerminal() {
           showTerminal ? "opacity-20" : "opacity-100"
         }`}
       >
-        <source src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/infera-1Mb0rTazSFHnB3jNpqRYwd9GXXYrnw.mp4" type="video/mp4" />
+        <source
+          src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/infera-1Mb0rTazSFHnB3jNpqRYwd9GXXYrnw.mp4"
+          type="video/mp4"
+        />
       </video>
 
       {!showTerminal && (
         <div className="absolute inset-0 flex items-center justify-center">
           <div className="w-96 max-w-md mx-4">
             <div className="text-center mb-6">
-              <h2 className="neon-text text-6xl font-mono font-bold mb-2">UMBRA</h2>
-              <p className="text-purple-300 text-sm font-mono">Initializing Neural Interface...</p>
+              <h2 className="neon-text text-6xl font-mono font-bold mb-2">
+                UMBRA
+              </h2>
+              <p className="text-purple-300 text-sm font-mono">
+                Initializing Neural Interface...
+              </p>
             </div>
 
             <div className="relative">
@@ -174,7 +181,9 @@ export default function UmbraTerminal() {
                 />
               </div>
               <div className="text-center mt-3">
-                <span className="text-purple-400 font-mono text-sm">{Math.round(loadingProgress)}% Complete</span>
+                <span className="text-purple-400 font-mono text-sm">
+                  {Math.round(loadingProgress)}% Complete
+                </span>
               </div>
             </div>
           </div>
@@ -218,27 +227,37 @@ export default function UmbraTerminal() {
             {/* Center Column - Main Terminal */}
             <div className="col-span-8 flex flex-col">
               <div className="flex items-center justify-between mb-4 pb-2 border-b border-purple-500/30">
-                <h1 className="neon-text text-2xl font-mono font-bold">UMBRA TERMINAL</h1>
-                <div className="text-purple-400 text-sm font-mono">{new Date().toLocaleDateString()}</div>
+                <h1 className="neon-text text-2xl font-mono font-bold">
+                  UMBRA TERMINAL
+                </h1>
+                <div className="text-purple-400 text-sm font-mono">
+                  {new Date().toLocaleDateString()}
+                </div>
               </div>
 
               <ScrollArea className="flex-1 mb-4">
                 <div className="space-y-3 font-mono text-sm">
                   {messages.map((message) => (
                     <div key={message.id} className="flex gap-3">
-                      <span className="text-purple-400 text-xs min-w-[60px]">{formatTime(message.timestamp)}</span>
+                      <span className="text-purple-400 text-xs min-w-[60px]">
+                        {formatTime(message.timestamp)}
+                      </span>
                       <span
                         className={`
                         ${
                           message.type === "user"
                             ? "text-cyan-400"
                             : message.type === "system"
-                              ? "text-green-400"
-                              : "text-purple-300"
+                            ? "text-green-400"
+                            : "text-purple-300"
                         }
                       `}
                       >
-                        {message.type === "user" ? ">" : message.type === "system" ? "[SYS]" : "[UMBRA]"}
+                        {message.type === "user"
+                          ? ">"
+                          : message.type === "system"
+                          ? "[SYS]"
+                          : "[UMBRA]"}
                       </span>
                       <span
                         className={`
@@ -246,8 +265,8 @@ export default function UmbraTerminal() {
                           message.type === "user"
                             ? "text-white"
                             : message.type === "system"
-                              ? "text-green-300"
-                              : "text-purple-100"
+                            ? "text-green-300"
+                            : "text-purple-100"
                         }
                       `}
                       >
@@ -258,9 +277,13 @@ export default function UmbraTerminal() {
 
                   {isTyping && (
                     <div className="flex gap-3">
-                      <span className="text-purple-400 text-xs min-w-[60px]">{formatTime(new Date())}</span>
+                      <span className="text-purple-400 text-xs min-w-[60px]">
+                        {formatTime(new Date())}
+                      </span>
                       <span className="text-purple-300">[UMBRA]</span>
-                      <span className="text-purple-100 typing-cursor">Thinking</span>
+                      <span className="text-purple-100 typing-cursor">
+                        Thinking
+                      </span>
                     </div>
                   )}
                 </div>
@@ -294,7 +317,9 @@ export default function UmbraTerminal() {
 
             {/* Right Column - Logs & Stats */}
             <div className="col-span-2 border-l border-purple-500/30 pl-4">
-              <div className="neon-text text-sm font-mono mb-4">SYSTEM LOGS</div>
+              <div className="neon-text text-sm font-mono mb-4">
+                SYSTEM LOGS
+              </div>
 
               <ScrollArea className="h-64">
                 <div className="space-y-1 text-xs text-purple-400">
@@ -318,5 +343,5 @@ export default function UmbraTerminal() {
         </div>
       )}
     </div>
-  )
+  );
 }
