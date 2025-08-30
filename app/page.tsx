@@ -120,7 +120,7 @@ export default function UmbraTerminal() {
 
   const copyContract = () => {
     // Placeholder contract address - will be updated when announced
-    const contractText = "Contract: To Be Announced"
+    const contractText = "918iW3U2qBwvUx4B8x4uDfUSxqboX7e85gUPWZq3pump";
     navigator.clipboard
       .writeText(contractText)
       .then(() => {
